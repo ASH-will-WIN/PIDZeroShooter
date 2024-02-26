@@ -39,8 +39,8 @@ public class Shooter extends SubsystemBase {
         topMotor.setInverted(true);
         bottomMotor.setInverted(true);
 
-        topMotor.getConfigurator().apply(new Slot0Configs().withKP(TOP_MOTOR_P).withKI(TOP_MOTOR_I).withKD(TOP_MOTOR_D));
-        bottomMotor.getConfigurator().apply(new Slot0Configs().withKP(BOTTOM_MOTOR_P).withKI(BOTTOM_MOTOR_I).withKD(BOTTOM_MOTOR_D));
+        topMotor.getConfigurator().apply(new Slot0Configs().withKP(P).withKI(I).withKD(D));
+        bottomMotor.getConfigurator().apply(new Slot0Configs().withKP(P).withKI(I).withKD(D));
 
 //        DataLog log = DataLogManager.getLog();
 //
@@ -85,8 +85,8 @@ public class Shooter extends SubsystemBase {
         bottomMotor.getConfigurator().apply(new Slot0Configs().withKP(ZERO).withKI(ZERO).withKD(ZERO));
         }
         else {
-            topMotor.getConfigurator().apply(new Slot0Configs().withKP(TOP_MOTOR_P).withKI(TOP_MOTOR_I).withKD(TOP_MOTOR_D));
-        bottomMotor.getConfigurator().apply(new Slot0Configs().withKP(BOTTOM_MOTOR_P).withKI(BOTTOM_MOTOR_I).withKD(BOTTOM_MOTOR_D));
+            topMotor.getConfigurator().apply(new Slot0Configs().withKP(P).withKI(I).withKD(D));
+        bottomMotor.getConfigurator().apply(new Slot0Configs().withKP(P).withKI(I).withKD(D));
         }
         topMotor.setControl(velocityVoltage.withVelocity(topTarget / 60));
         bottomMotor.setControl(velocityVoltage.withVelocity(bottomTarget / 60));
